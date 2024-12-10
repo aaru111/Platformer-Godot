@@ -5,6 +5,8 @@ var input:
 	get: return object.input
 
 func play(animation):
+	if object.sword and object.sprite.sprite_frames.has_animation(animation + "_sword"):
+		animation += "_sword"
 	object.sprite.play(animation)
 	
 func accelerate(delta, direction = input.x):
