@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://yiisn2ro133c"]
+[gd_scene load_steps=42 format=3 uid="uid://yiisn2ro133c"]
 
 [ext_resource type="Texture2D" uid="uid://c62g2pwamd8jc" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_8tbpf"]
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_65u4f"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://bpyxwvrwr0jv0" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="11_cdplk"]
 [ext_resource type="Texture2D" uid="uid://bmr0kfqvktqoq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="12_lfai8"]
 [ext_resource type="Texture2D" uid="uid://dl7tlqwl75me4" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="13_e4ttf"]
+[ext_resource type="PackedScene" uid="uid://deaqt7mol416q" path="res://scenes/collectable/gold_coin.tscn" id="14_6nm65"]
 [ext_resource type="Texture2D" uid="uid://ddewdta3ktviv" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 04.png" id="14_bo1is"]
 [ext_resource type="Texture2D" uid="uid://chifggskllrtq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 05.png" id="15_i7l15"]
 [ext_resource type="Texture2D" uid="uid://ceerv2fwoi2su" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 06.png" id="16_la4gt"]
@@ -527,7 +528,7 @@ centered = false
 motion_scale = Vector2(0.3, 1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ReflectionLayer"]
-position = Vector2(63, 119)
+position = Vector2(140, 119)
 sprite_frames = SubResource("SpriteFrames_5ips0")
 autoplay = "default"
 frame = 3
@@ -573,6 +574,20 @@ centered = false
 tile_set = SubResource("TileSet_lwtmu")
 format = 2
 layer_0/tile_data = PackedInt32Array(65536, 0, 0, 131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 327680, 0, 1, 327681, 393216, 1, 327682, 65536, 0, 327683, 65536, 0, 327684, 65536, 0, 327685, 65536, 0, 327686, 65536, 0, 327687, 458752, 1, 327688, 65536, 1, 196616, 262144, 0, 262151, 0, 0, 262152, 589824, 0, 196609, 131072, 1, 131073, 131072, 1, 262153, 131072, 0, 327689, 393216, 1, 327690, 65536, 0, 327691, 65536, 0, 327692, 65536, 0, 327693, 65536, 0, 65537, 131072, 0, 262145, 131072, 1, 393216, 0, 2, 393217, 65536, 2, 393218, 65536, 2, 393219, 65536, 2, 393220, 65536, 2, 393221, 65536, 2, 393222, 65536, 2, 393223, 65536, 2, 393224, 65536, 2, 393225, 65536, 2, 393226, 65536, 2, 393227, 65536, 2, 393228, 65536, 2, 393229, 65536, 2, 327694, 65536, 0, 327695, 65536, 0, 327696, 65536, 0, 393232, 65536, 2, 393231, 65536, 2, 393230, 65536, 2, 327697, 65536, 0, 327698, 65536, 0, 393234, 65536, 2, 393233, 65536, 2, 327699, 458752, 1, 393235, 65536, 2, 196620, 0, 4, 196621, 131072, 4, 327700, 65536, 1, 327701, 393216, 1, 327702, 65536, 0, 393238, 65536, 2, 393237, 65536, 2, 393236, 65536, 2, 327703, 65536, 0, 327704, 65536, 0, 393239, 65536, 2, 393240, 65536, 2, 327706, 131072, 0, 327705, 65536, 0, 393241, 65536, 2, 393242, 131072, 2, 131088, 0, 4, 131089, 131072, 4, 262164, 65536, 0, 262163, 0, 0, 262165, 458752, 4, 196629, 262144, 0)
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="GoldCoin" parent="Coins" instance=ExtResource("14_6nm65")]
+position = Vector2(154, 147)
+
+[node name="GoldCoin2" parent="Coins" instance=ExtResource("14_6nm65")]
+position = Vector2(204, 149)
+
+[node name="GoldCoin3" parent="Coins" instance=ExtResource("14_6nm65")]
+position = Vector2(413, 81)
+
+[node name="GoldCoin4" parent="Coins" instance=ExtResource("14_6nm65")]
+position = Vector2(545, 54)
 
 [node name="player" type="CharacterBody2D" parent="."]
 position = Vector2(119, 135)

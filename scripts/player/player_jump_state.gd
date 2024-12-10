@@ -10,6 +10,7 @@ func enter():
 	var_jump_height = false
 	input.jump_buffer = false
 	
+	
 func physics_update(delta):
 	move(delta, true)
 	

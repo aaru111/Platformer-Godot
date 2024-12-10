@@ -11,7 +11,7 @@ const ACCELERATION = 900.0
 
 const JUMP_GRAVITY = 1100.0
 const FALL_GRAVITY = 700.0
-const TERMINAL_VELOCITY = 200.0 
+const TERMINAL_VELOCITY = 200.0
 
 var direction:
 	get: return direction
