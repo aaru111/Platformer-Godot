@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://yiisn2ro133c"]
+[gd_scene load_steps=41 format=3 uid="uid://yiisn2ro133c"]
 
 [ext_resource type="Texture2D" uid="uid://c62g2pwamd8jc" path="res://assets/Palm Tree Island/Sprites/Background/Additional Sky.png" id="1_8tbpf"]
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_65u4f"]
@@ -20,9 +20,14 @@
 [ext_resource type="Texture2D" uid="uid://b35hnkmer73gx" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="6_senkm"]
 [ext_resource type="Texture2D" uid="uid://dgl6ht400oh5r" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="7_hkrea"]
 [ext_resource type="Texture2D" uid="uid://lqpb33ugn2la" path="res://assets/Palm Tree Island/Sprites/Background/Water Reflect Big 04.png" id="7_jiqsa"]
+[ext_resource type="Texture2D" uid="uid://bjjn1gxtr51w0" path="res://assets/Palm Tree Island/Sprites/Background/Big Clouds.png" id="8_567j8"]
+[ext_resource type="Script" path="res://scripts/scrolling_background.gd" id="8_fpveb"]
 [ext_resource type="Texture2D" uid="uid://c7gpddwoqm70f" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 01.png" id="8_jam3o"]
 [ext_resource type="Texture2D" uid="uid://1x1pepgsoxvw" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 02.png" id="9_qwuk5"]
+[ext_resource type="Texture2D" uid="uid://cylt0cr1y5j4k" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 1.png" id="9_wk3d3"]
+[ext_resource type="Texture2D" uid="uid://dsy2162ooq2yp" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 2.png" id="10_cq0hg"]
 [ext_resource type="Texture2D" uid="uid://xsgi3xblk2mt" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/03-Jump/Jump 03.png" id="10_fmjqp"]
+[ext_resource type="Texture2D" uid="uid://c3vwl3ti8jobe" path="res://assets/Palm Tree Island/Sprites/Background/Small Cloud 3.png" id="11_87rq5"]
 [ext_resource type="Texture2D" uid="uid://bpyxwvrwr0jv0" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 01.png" id="11_cdplk"]
 [ext_resource type="Texture2D" uid="uid://bmr0kfqvktqoq" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 02.png" id="12_lfai8"]
 [ext_resource type="Texture2D" uid="uid://dl7tlqwl75me4" path="res://assets/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/02-Run/Run 03.png" id="13_e4ttf"]
@@ -527,6 +532,41 @@ sprite_frames = SubResource("SpriteFrames_5ips0")
 autoplay = "default"
 frame = 3
 frame_progress = 0.0106633
+centered = false
+
+[node name="SmallClouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(320, 0)
+script = ExtResource("8_fpveb")
+speed = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/SmallClouds"]
+position = Vector2(288, 44)
+texture = ExtResource("9_wk3d3")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/SmallClouds"]
+position = Vector2(234, 18)
+texture = ExtResource("9_wk3d3")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground/SmallClouds"]
+position = Vector2(62, 47)
+texture = ExtResource("10_cq0hg")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxBackground/SmallClouds"]
+position = Vector2(255, 70)
+texture = ExtResource("11_87rq5")
+
+[node name="BigClouds" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 1)
+motion_mirroring = Vector2(448, 0)
+script = ExtResource("8_fpveb")
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/BigClouds"]
+position = Vector2(60, 17)
+texture = ExtResource("8_567j8")
 centered = false
 
 [node name="TileMap" type="TileMap" parent="."]
